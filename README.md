@@ -1,4 +1,4 @@
-# NeuroState Estimation Experiment
+# Hidden State Estimation Experiment
 
 This is an implementation of the online experiment described in Prat-Carrabin et al. (2021) using jsPsych. The experiment investigates how humans estimate hidden states from noisy observations under different change-point dynamics.
 
