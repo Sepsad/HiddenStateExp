@@ -136,6 +136,12 @@ class NeuroStateExperiment {
                 </div>
                 <div class="option-group">
                     <label>
+                        <input type="radio" name="trial-count" value="500"> 
+                        Medium Version (500 trials)
+                    </label>
+                </div>
+                <div class="option-group">
+                    <label>
                         <input type="radio" name="trial-count" value="200"> 
                         Short Version (200 trials)
                     </label>
@@ -677,22 +683,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Initializing NeuroStateExperiment...");
         const experiment = new NeuroStateExperiment();
         console.log("Experiment initialized successfully");
-        
-        // Add a global start button as a fallback
-        const container = document.getElementById('experiment-container');
-        const fallbackButton = document.createElement('button');
-        fallbackButton.textContent = 'Start Experiment (Fallback)';
-        fallbackButton.className = 'prominent-button';
-        fallbackButton.style.marginTop = '30px';
-        fallbackButton.addEventListener('click', () => {
-            if (experiment && typeof experiment.startExperiment === 'function') {
-                experiment.startExperiment();
-            } else {
-                console.error("Experiment object or startExperiment method not available");
-                alert("Error starting experiment. Please refresh the page and try again.");
-            }
-        });
-        container.appendChild(fallbackButton);
     } catch (error) {
         console.error("Error initializing experiment:", error);
         document.body.innerHTML += `
