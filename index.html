@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroState Estimation Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="experiment-container">
+        <div id="instructions" class="instructions">
+            <h2>NeuroState Estimation Task</h2>
+            <p>Instructions will appear here before the experiment starts.</p>
+            <button id="start-button">Start Experiment</button>
+        </div>
+        
+        <div id="experiment-display" class="experiment-display" style="display: none;">
+            <canvas id="experiment-canvas"></canvas>
+            <div id="score-display" class="score-display">Score: 0</div>
+            <div id="tutorial-info" class="tutorial-info" style="display: none;"></div>
+        </div>
+        
+        <div class="progress-container" style="display: none;">
+            <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        
+        <div id="completion-screen" style="display: none;">
+            <h2>Experiment Complete</h2>
+            <p>Thank you for participating!</p>
+            <div id="experiment-summary" class="experiment-summary"></div>
+            <div class="download-options">
+                <button id="download-json" class="download-button">Download Data (JSON)</button>
+                <button id="download-csv" class="download-button">Download Data (CSV)</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load script files -->
+    <script src="experiment-utils.js"></script>
+    <script src="stimulus-generator.js"></script>
+    <script src="experiment.js"></script>
+</body>
+</html>
